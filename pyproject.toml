@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "control-auditor"
+version = "1.0.0"
+description = "Systemic Invariant Verification & Dead-Control Auditing CLI for Autonomous Systems"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Verification Engineering Team"}
+]
+dependencies = []
+
+[project.scripts]
+control-auditor = "control_auditor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["control_auditor*"]
